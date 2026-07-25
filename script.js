@@ -179,11 +179,13 @@ function createHearts() {
 // 800일 자동 표시
 // ==============================
 
-const startDate = new Date("2024-05-19");
+const startDate = new Date("2024-05-19T00:00:00+09:00");
 
 const today = new Date();
 
-const diff = Math.floor((today-startDate)/(1000*60*60*24));
+const diff = Math.floor(
+    (today - startDate) / (1000 * 60 * 60 * 24)
+);
 
 const dayElement = document.getElementById("days");
 
