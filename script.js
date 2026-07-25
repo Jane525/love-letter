@@ -177,7 +177,7 @@ const today = new Date();
 
 const diff = Math.floor(
     (today - startDate) / (1000 * 60 * 60 * 24)
-);
+)+1;
 
 const dayElement = document.getElementById("days");
 
