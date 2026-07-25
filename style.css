@@ -145,7 +145,7 @@ body{
 
     transform:rotate(-18deg);
 
-    animation:shoot 9s infinite;
+    animation:shoot 6s infinite;
 
     opacity:.7;
 
@@ -154,39 +154,28 @@ body{
 @keyframes shoot{
 
     0%{
-
-        left:-250px;
-        top:130px;
+        left:120%;
+        top:-100px;
         opacity:0;
-
     }
 
     8%{
-
         opacity:1;
-
     }
 
-    20%{
-
-        left:120%;
-
-        top:250px;
-
+    30%{
+        left:20%;
+        top:300px;
         opacity:0;
-
     }
 
     100%{
-
-        left:120%;
-
+        left:20%;
+        top:300px;
         opacity:0;
-
     }
 
 }
-
 
 /* ===========================
      메인
