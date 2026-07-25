@@ -1,0 +1,540 @@
+/* ===========================
+   기본 설정
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Pretendard',sans-serif;
+
+    background:
+    radial-gradient(circle at top,#25315f 0%,#121933 40%,#090b18 100%);
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+
+/* ===========================
+      별 배경
+=========================== */
+
+#stars{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-3;
+
+}
+
+.star{
+
+    position:absolute;
+
+    width:2px;
+
+    height:2px;
+
+    background:white;
+
+    border-radius:50%;
+
+    animation:twinkle 3s infinite ease-in-out;
+
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.2;
+        transform:scale(.8);
+
+    }
+
+    50%{
+
+        opacity:1;
+        transform:scale(1.6);
+
+    }
+
+}
+
+
+/* ===========================
+        달
+=========================== */
+
+.moon{
+
+    position:fixed;
+
+    right:8%;
+
+    top:60px;
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    background:#fff8d6;
+
+    box-shadow:
+
+    0 0 40px rgba(255,255,220,.8),
+
+    0 0 120px rgba(255,255,220,.25);
+
+    animation:floatMoon 8s ease-in-out infinite;
+
+    z-index:-2;
+
+}
+
+@keyframes floatMoon{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(18px);
+
+    }
+
+}
+
+
+
+/* ===========================
+      별똥별
+=========================== */
+
+.shooting-star{
+
+    position:fixed;
+
+    top:120px;
+
+    left:-200px;
+
+    width:220px;
+
+    height:2px;
+
+    background:linear-gradient(to right,white,transparent);
+
+    transform:rotate(-18deg);
+
+    animation:shoot 9s infinite;
+
+    opacity:.7;
+
+}
+
+@keyframes shoot{
+
+    0%{
+
+        left:-250px;
+        top:130px;
+        opacity:0;
+
+    }
+
+    8%{
+
+        opacity:1;
+
+    }
+
+    20%{
+
+        left:120%;
+
+        top:250px;
+
+        opacity:0;
+
+    }
+
+    100%{
+
+        left:120%;
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* ===========================
+     메인
+=========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+.hero h3{
+
+    color:#FFD9EC;
+
+    font-size:1.5rem;
+
+}
+
+.hero h1{
+
+    margin-top:10px;
+
+    font-size:4rem;
+
+}
+
+.hero p{
+
+    margin-top:30px;
+
+    line-height:1.9;
+
+    color:#dddddd;
+
+    font-size:1.2rem;
+
+}
+
+button{
+
+    margin-top:45px;
+
+    padding:16px 34px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:white;
+
+    color:#222;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 30px rgba(255,255,255,.2);
+
+}
+
+
+
+/* ===========================
+      편지
+=========================== */
+
+.hidden{
+
+    display:none;
+
+}
+
+#letterSection{
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:120px 20px;
+
+}
+
+.letter{
+
+    width:min(820px,92%);
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:28px;
+
+    padding:60px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+}
+
+.letter h2{
+
+    color:#FFD9EC;
+
+}
+
+.letter h1{
+
+    margin:15px 0 35px;
+
+}
+
+#typing{
+
+    white-space:pre-line;
+
+    line-height:2.1;
+
+    color:#efefef;
+
+}
+
+
+
+/* ===========================
+     카드
+=========================== */
+
+.memory{
+
+    padding:120px 20px;
+
+}
+
+.memory h2{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:22px;
+
+    padding:45px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card h3{
+
+    margin:20px 0;
+
+}
+
+
+
+/* ===========================
+      카운터
+=========================== */
+
+.counter{
+
+    padding:150px 20px;
+
+    text-align:center;
+
+}
+
+.days{
+
+    margin:40px 0;
+
+    font-size:2rem;
+
+}
+
+#days{
+
+    display:block;
+
+    font-size:7rem;
+
+    color:#FFD9EC;
+
+    font-weight:700;
+
+}
+
+
+
+/* ===========================
+      엔딩
+=========================== */
+
+.ending{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+#loveText{
+
+    margin-top:60px;
+
+    opacity:0;
+
+    transition:.8s;
+
+    font-size:4rem;
+
+    color:#FFD9EC;
+
+}
+
+
+
+/* ===========================
+      하트
+=========================== */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-30px;
+
+    font-size:22px;
+
+    animation:rise 5s linear forwards;
+
+}
+
+@keyframes rise{
+
+    to{
+
+        transform:translateY(-120vh);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+/* ===========================
+      모바일
+=========================== */
+
+@media(max-width:768px){
+
+.hero h1{
+
+    font-size:2.8rem;
+
+}
+
+.moon{
+
+    width:120px;
+    height:120px;
+
+}
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+.letter{
+
+    padding:35px;
+
+}
+
+#days{
+
+    font-size:5rem;
+
+}
+
+#loveText{
+
+    font-size:2.7rem;
+
+}
+
+}
